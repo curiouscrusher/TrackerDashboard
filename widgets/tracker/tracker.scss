@@ -1,0 +1,48 @@
+$background-error-color: #ad3b0e;
+$background-passed-color: #8fb347;
+
+$title-color: rgba(255, 255, 255, 0.7);
+$updated-at-color: rgba(0, 0, 0, 0.3);
+
+.widget-tracker {
+  &.passed {
+    background-color: $background-passed-color;
+  }
+
+  &.failed {
+    background-color: $background-error-color;
+  }
+
+  &.pending {
+    background-size: 72px 72px;
+    background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+
+    -webkit-background-size: 72px 72px;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.5, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+
+    -moz-background-size: 72px 72px;
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
+  }
+
+  i.icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/tracker-logo.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+
+  h1.title {
+    text-transform: capitalize;
+    color: $title-color;
+  }
+
+  .updated-at {
+    color: $updated-at-color;
+  }
+}

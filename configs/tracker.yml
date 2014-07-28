@@ -1,0 +1,6 @@
+---
+auth_token: <%= @token %>
+projects:
+  CICM:
+    project_id: 1125842
+    user: Nate Holland
